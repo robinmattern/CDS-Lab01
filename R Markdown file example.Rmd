@@ -1,0 +1,122 @@
+---
+title: "Exercise week1-2"
+author: "Qing Tian"
+date: '2017-08-25'
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Summary: this exercise practices using R Markdown and basic R commands. It includes two parts: (i) run some simple R commands, (ii) work with specific datasets.
+
+
+###Test R commands
+
+*variables*
+
+integer:
+
+```{r}
+x <- 1
+y <- 2
+z <- x + y
+print (x)
+print (y)
+print (z)
+```
+
+strings:
+
+```{r}
+str1 <- "Hello"
+str2 <- "from Qing"
+str = paste (str1, str2)
+print (str)
+
+cat(str1,str2)
+
+```
+
+
+one-dimenal array:
+
+```{r}
+x <- 0:10
+y <- 2*x
+plot(x,y)
+```
+
+
+```{r}
+x <- seq(10, 20)
+print (x)
+
+x <- seq(10, 20, 2)
+print (x)
+
+y <- rev(x)
+print(y)
+```
+
+```{r}
+x <- c(1, 3, 6, 10, 15)
+b <- 2
+y <- 5*x + b
+print(y)
+plot(x, y)
+```
+
+
+```{r}
+x <- rep(c(2,4,6,8), 3)
+print (x)
+
+x <- rep(c(2, 4, 6, 8), each=2)
+print(x)
+```
+
+
+
+###Work with specific datasets
+
+**Dataset1: cars**
+
+*Show data*
+
+
+```{r}
+colnames(cars)
+nrow(cars)
+summary(cars)
+```
+
+*Plotting*
+
+
+```{r cars, echo=FALSE}
+plot(cars)
+```
+
+
+**Dataset2: pressure**
+ 
+*Data: columns, number of rows, and stats*
+ 
+```{r, echo=FALSE}
+colnames(pressure)
+nrow(pressure)
+summary(pressure)
+```
+
+*Relationship*
+
+```{r, echo=FALSE}
+plot(pressure)
+```
+
