@@ -3,8 +3,8 @@ title: "Exercise week1-2"
 author: "Qing Tian"
 date: '2017-08-25'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
   word_document: default
 ---
 
